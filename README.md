@@ -1,11 +1,53 @@
-<div align="center">
+# منصة «لُغَتِي الْعَرَبِيَّة» لمرحلة التعليم الأساسي (الصفوف 7 • 8 • 9)
+### منهاج الجمهورية اليمنية المعتمد • وزارة التربية والتعليم والبحث العلمي
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+مرجع أكاديمي وامتحاني شامل ومحقق لكتب اللغة العربية لمرحلة التعليم الأساسي (السابع، الثامن، التاسع)، يشمل:
+- نصوص القراءة والشروح والأفكار والمعاجم.
+- موسوعة النحو والصرف والقواعد والأوزان.
+- موسوعة الإملاء ورسم الهمزات والتنبيهات.
+- بنك الاختبارات والمحاكي التفاعلي الذكي.
+- الأسئلة الامتحانية المكتشفة خارج الخلاصة.
+- مركز التحميل والطباعة (Word و PDF و Excel).
+- خطط المناهج المعتمدة الرسمية وتصديرها.
 
-  <h1>Built with AI Studio</h2>
+---
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## النشر السريع على منصة Vercel (Deployment on Vercel)
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+تمت تهيئة المشروع بالكامل ليكون متوافقاً 100% مع منصة **Vercel**:
 
-</div>
+### الطريقة الأولى: عبر الربط مع مستودع GitHub (موصى بها)
+1. ارفع المشروع إلى مستودعك على [GitHub](https://github.com).
+2. افتح موقع [Vercel](https://vercel.com) وسجّل الدخول.
+3. اضغط على **Add New Project** ثم **Import** للمستودع.
+4. سيتعرف Vercel تلقائياً على الإعدادات عبر ملف `vercel.json`:
+   - **Framework Preset**: `Vite`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+5. (اختياري) في قسم **Environment Variables**، أضف:
+   - `GEMINI_API_KEY`: مفتاح Google Gemini API لتوليد الوسائل والبطاقات البصرية الذكية.
+6. اضغط على **Deploy**. سيتم بناء ونشر الموقع خلال ثوانٍ وتزويدك برابط مباشر مجاني (`https://your-project.vercel.app`).
+
+### الطريقة الثانية: عبر Vercel CLI
+```bash
+npm install -g vercel
+vercel
+```
+
+---
+
+## التشغيل المحلي (Local Development)
+
+```bash
+# تثبيت الحزم
+npm install
+
+# تشغيل بيئة التطوير المحلية
+npm run dev
+
+# بناء النسخة الإنتاجية
+npm run build
+
+# فحص الأخطاء البرمجية
+npm run lint
+```

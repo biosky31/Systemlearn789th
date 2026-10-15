@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Utility for hiding scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Reading Mode Active Optimizations */
+  .reading-mode-active {
+    background-color: #f8fafc;
+  }
+
+  .reading-mode-active p {
+    line-height: 2.1 !important;
+  }
+
+  @media print {
+    @page {
+      size: A4 landscape;
+      margin: 8mm 8mm 8mm 8mm;
+    }
+
+    body {
+      background: white !important;
+      color: #0f172a !important;
+      font-size: 9pt !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Hide elements with no-print class when printing */
+    .no-print {
+      display: none !important;
+    }
+
+    /* Print container expands fully */
+    .print-only-container {
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      background: transparent !important;
+    }
+
+    table {
+      page-break-inside: auto;
+      border-collapse: collapse !important;
+      width: 100% !important;
+    }
+
+    tr {
+      page-break-inside: avoid;
+      page-break-after: auto;
+    }
+
+    thead {
+      display: table-header-group;
+    }
+
+    tfoot {
+      display: table-footer-group;
+    }
+
+    th, td {
+      border: 1px solid #475569 !important;
+      padding: 4px 6px !important;
+    }
+  }
+}
